@@ -22,6 +22,14 @@ app.get("/greeting/:name", (req, res) => {
 });
 
 
+// TIP CALCULATOR //
+app.get("/tip/:total/:tipPercentage", (req, res) => {
+	let total = req.params.total * req.params.tipPercentage/100;
+	console.log(req.params);
+	res.send(`Here's your total: ${total}`);
+});
+
+
 
 
 
